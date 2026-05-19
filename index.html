@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Portfolio/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="static-text"> </div>
+        <div class="typing"></div>
+    </div>
+    <script>
+        // I found this code here https://www.youtube.com/watch?v=ZVwDJArVbC0
+        const words = ["Hello! My name is Petra", "Bonjour! Je m'appelle Petra","Hei! Jeg heter Petra", "你好，我叫静兰"];
+        let wordIndex= 0;
+        let charIndex= 0;
+        let isDeleting= false;
+        const typingElement = document.querySelector(".typing");
+
+        function typeEffect(){
+            const currentword= words[wordIndex];
+            if (isDeleting){
+                charIndex--;
+            } else{
+                charIndex++;
+            }
+            typingElement.textContent = currentword.substring(0,charIndex);
+            
+
+            if(!isDeleting && charIndex === currentword.length){
+                setTimeout(() => isDeleting=true, 500);
+            } else if (isDeleting && charIndex === 0){
+                isDeleting=false;
+                wordIndex=(wordIndex + 1)%words.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 75: 150);
+
+        }
+            typeEffect();
+    </script>
 </body>
 </html>

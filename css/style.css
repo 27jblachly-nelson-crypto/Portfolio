@@ -1,0 +1,28 @@
+body{
+    font-family:Verdana, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    font-weight:bold;
+}
+.container{
+    width:600px;
+    position:relative;
+    font-size:2rem;
+    display:flex;
+    align-items:center;
+}
+.static-text{
+    white-space:nowrap;
+    margin-right:10px;
+}
+.typing{
+    border-right:3px solid;
+    padding-right:2px;
+    animation:blink 0.8s infinite;
+}
+@keyframes blink{
+    50% {border-color:transparent;}
+}
+
