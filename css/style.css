@@ -3,9 +3,8 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height: 100vh;
     font-weight:bold;
-    color:#13315c;
+    color:whitesmoke;
 }
 .container{
     width:600px;
@@ -13,6 +12,7 @@ body{
     font-size:2rem;
     display:flex;
     align-items:center;
+    height:100vh;
 }
 .static-text{
     white-space:nowrap;
@@ -28,5 +28,16 @@ body{
 }
 
 html{
-    background-color:#8da9c4;
+    background-color:#1b1b1b;
+    scroll-snap-type:y mandatory;
+}
+section {
+    height:100vh;
+    scroll-snap-align:start;
+}
+h1{
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    position:relative;
 }
