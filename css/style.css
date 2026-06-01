@@ -34,10 +34,40 @@ html{
 section {
     height:100vh;
     scroll-snap-align:start;
-}
-h1{
     align-items:center;
     justify-content:center;
+}
+h1{
     display:flex;
     position:relative;
+}
+script{
+    justify-content:center;
+    align-items:center;
+}
+h2{
+    text-align:center;
+}
+
+.column-container{
+    display:flex;
+    gap:20px;
+    width:100%;
+}
+.column{
+    flex:1;
+    border:2px solid #5C4E4E;
+    padding:15px;
+    border-radius:5px;
+}
+@media (max-width:768px){
+    .column-container{
+        flex-direction:column;
+    }
+}
+footer{
+    margin-top:-30px;
+}
+a{
+    color:#0000FF;
 }
